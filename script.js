@@ -76,6 +76,20 @@ const accessories_array = [
 ]
 
 const randomBtn = document.getElementById('random')
+const backgroundBtn = document.getElementById('background-btn')
+
+backgroundBtn.addEventListener('click', (e) => {
+    let index
+    for (index = 0; index <  backgroung_array.length; ++index){
+        const array = backgroung_array[index]
+        console.log(array)
+        let btn = document.createElement('button')
+        btn.innerText = array
+        document.body.appendChild(btn)
+        document.getElementById('background').src = `img/alpaca 2/backgrounds/${backgroung_array[?]}`
+    
+    }
+})
 
 function getRandom() {
     randomIndexBackground = Math.floor(Math.random() * backgroung_array.length)
@@ -107,3 +121,9 @@ function getRandom() {
 }
 
 randomBtn.addEventListener('click', getRandom())
+
+backgroundBtn.addEventListener('click', createBtn)
+
+function createBtn() {
+
+}
