@@ -4,9 +4,61 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
         <title>Alpaca Image Generator</title>
     </head>
     <body>
-        
+        <div class="container">
+
+            <h1>Alpaca Generator</h1>
+
+            <div class="main">
+
+                <div class="image">
+                    <img class='alpaca-img' id="background" style="z-index: 0;" src="img/alpaca 2/backgrounds/" alt="">
+                    <img class="alpaca-img" id="ears" style="z-index: 5;" src="img/alpaca 2/ears/" alt="">
+                    <img class="alpaca-img" id="eyes" style="z-index: 7;" src="img/alpaca 2/eyes/" alt="">
+                    <img class="alpaca-img" id="hair" style="z-index: 6;" src="img/alpaca 2/hair/" alt="">
+                    <img class="alpaca-img" id="leg" style="z-index: 4;" src="img/alpaca 2/leg/" alt="">
+                    <img class="alpaca-img" id="neck" style="z-index: 1;" src="img/alpaca 2/neck/" alt="">
+                    <img class="alpaca-img" id="mouth" style="z-index: 3;" src="img/alpaca 2/mouth/" alt="">
+                    <img class="alpaca-img" id="nose" style="z-index: 2;" src="img/alpaca 2/nose.png" alt="">
+                    <img class="alpaca-img" id="accessories" style="z-index: 8;" src="img/alpaca 2/accessories/earings.png" alt="">
+
+                    <div class="random">
+                        <button onclick="getRandom()" id="random">Random</button>
+                        <button>Download</button>
+                    </div>
+                    
+                </div>
+                
+
+                    <div class="allbtn">
+                        <div class="acces">
+                            <h2 class="choise">Accessorize the aplaca's</h2>
+                            <div class="buttons">
+                                <button>Hair</button>
+                                <button>Ears</button>
+                                <button>Neck</button>
+                                <button>Eyes</button>
+                                <button>Leg</button>
+                                <button>Background</button>
+                            </div>
+                        </div>
+
+                        <div class="style">
+                            <h2 class="choise">Style</h2>
+                            <div class="buttons">
+                                <button>Defolt</button>
+                                <button>Bang</button>
+                                <button>Curls</button>
+                                <button>Elegant</button>
+                            </div>
+                        </div>
+                    </div>    
+            </div>
+
+        </div>
+        <script src="script.js"></script>
     </body>
     </html>
