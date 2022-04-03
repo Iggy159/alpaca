@@ -1,92 +1,142 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Alpaca Image Generator</title>
-    </head>
-    <body>
-        <div class="container">
+<!DOCTYPE html>
+<html lang="en">
 
-            <h1>Alpaca Generator</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Alpaca Image Generator</title>
+    <script src="html2canvas.min.js"></script>
+</head>
 
-            <div class="main">
+<body>
+    <div class="container">
 
-                <div class="image">
-                    <img class='alpaca-img' id="background" style="z-index: 0;" src="img/alpaca 2/backgrounds/" alt="">
-                    <img class="alpaca-img" id="ears" style="z-index: 5;" src="img/alpaca 2/ears/" alt="">
-                    <img class="alpaca-img" id="eyes" style="z-index: 7;" src="img/alpaca 2/eyes/" alt="">
-                    <img class="alpaca-img" id="hair" style="z-index: 6;" src="img/alpaca 2/hair/" alt="">
-                    <img class="alpaca-img" id="leg" style="z-index: 4;" src="img/alpaca 2/leg/" alt="">
-                    <img class="alpaca-img" id="neck" style="z-index: 1;" src="img/alpaca 2/neck/" alt="">
-                    <img class="alpaca-img" id="mouth" style="z-index: 3;" src="img/alpaca 2/mouth/" alt="">
-                    <img class="alpaca-img" id="nose" style="z-index: 2;" src="img/alpaca 2/nose.png" alt="">
-                    <img class="alpaca-img" id="accessories" style="z-index: 8;" src="img/alpaca 2/accessories/earings.png" alt="">
+        <h1>Alpaca Generator</h1>
 
-                    <div class="random">
-                        <button onclick="getRandom()" id="random">Random</button>
-                        <button>Download</button>
-                    </div>
-                    
+        <div class="main">
+
+            <div class="image" id="">
+                <div class="alpacaImage">
+                <img class='alpaca-img' id="background" style="z-index: 0;" src="img/alpaca 2/backgrounds/" alt="">
+                <img class="alpaca-img" id="ears" style="z-index: 5;" src="img/alpaca 2/ears/" alt="">
+                <img class="alpaca-img" id="eyes" style="z-index: 7;" src="img/alpaca 2/eyes/" alt="">
+                <img class="alpaca-img" id="hair" style="z-index: 6;" src="img/alpaca 2/hair/" alt="">
+                <img class="alpaca-img" id="leg" style="z-index: 4;" src="img/alpaca 2/leg/" alt="">
+                <img class="alpaca-img" id="neck" style="z-index: 1;" src="img/alpaca 2/neck/" alt="">
+                <img class="alpaca-img" id="mouth" style="z-index: 3;" src="img/alpaca 2/mouth/" alt="">
+                <img class="alpaca-img" id="nose" style="z-index: 2;" src="img/alpaca 2/nose.png" alt="">
+                <img class="alpaca-img" id="accessories" style="z-index: 8;" src="img/alpaca 2/accessories/earings.png" alt="">
+            </div>
+                <div class="random">
+                    <button onclick="getRandom()" id="random">Random</button>
+                    <button id="download">Download</button>
                 </div>
-                
 
-                    <div class="allbtn">
-                        <div class="acces">
-                            <h2 class="choise">Accessorize the aplaca's</h2>
-                            <div id="" class="buttons">
-                                <button id="hair-btn">Hair</button>
-                                <select name="Ears" id="ears-select">
-                                    <option disabled value="" >Ears</option>
-                                    <option value='default.png'>Default</option>
-                                    <option value='tilt-backward.png'>Tilt Backward</option>
-                                    <option value='tilt-forward.png'>Tilt Forward</option>
-                                </select>
-
-                                <select name="" id="neck-select">
-                                    <option disabled value="">Neck</option>
-                                    <option value="bend-backward.png">Bend Backward</option>
-                                    <option value="bend-forward.png">Bend Forward</option>
-                                    <option value="default.png">Default</option>
-                                    <option value="thick.png">Thick</option>
-                                </select>
-
-                                <select name="" id="eyes-select">
-                                    <option disabled value="">Eyes</option>
-                                    <option value="angry.png">Angry</option>
-                                    <option value="default.png">Default</option>
-                                    <option value="naughty.png">Naughty</option>
-                                    <option value="panda.png">Panda</option>
-                                    <option value="smart.png">Smart</option>
-                                    <option value="star.png">Star</option>
-                                </select>
-
-                                <select name="" id="leg-select">
-                                    <option disabled value="">Leg</option>
-                                    <option value="bubble-tea.png">Bubble Tea</option>
-                                    <option value="cookie.png">Cookie</option>
-                                    <option value="default.png">Default</option>
-                                    <option value="game-console.png">Game Console</option>
-                                    <option value="tilt-backward.png">Tilt Backward</option>
-                                    <option value="tilt-forward.png">Tilt Forward</option>
-                                </select>
-
-                                <button id="background-btn">Background</button>
-                            </div>
-                        </div>
-
-                        <div class="style">
-                            <h2 class="choise">Style</h2>
-                            <div id="style-btn" class="buttons">
-                                
-                            </div>
-                        </div>
-                    </div>    
             </div>
 
+            <div class="accessories">
+                <h2 class="choise">Accessorize the aplaca's</h2>
+
+                <div class="style">
+                    <h3>Hair</h3>
+                    <select name="" id="hair-select">
+                        <option value='bang.png'>Default</option>
+                        <option value='curls.png'>Curls</option>
+                        <option value='default.png'>Default</option>
+                        <option value='elegant.png'>Elegant</option>
+                        <option value='fancy.png'>Fancy</option>
+                        <option value='quiff.png'>Quiff</option>
+                        <option value='short.png'>Short</option>
+                    </select>
+                </div>
+
+                <div class="style">
+                    <h3>Ears</h3>
+                    <select name="Ears" id="ears-select">
+                        <option value='default.png'>Default</option>
+                        <option value='tilt-backward.png'>Tilt Backward</option>
+                        <option value='tilt-forward.png'>Tilt Forward</option>
+                    </select>
+                </div>
+
+                <div class="style">
+                    <h3>Neck</h3>
+                    <select name="" id="neck-select">
+                        <option value="bend-backward.png">Bend Backward</option>
+                        <option value="bend-forward.png">Bend Forward</option>
+                        <option value="default.png">Default</option>
+                        <option value="thick.png">Thick</option>
+                    </select>
+                </div>
+
+                <div class="style">
+                    <h3>Eyes</h3>
+                    <select name="" id="eyes-select">
+                        <option value="angry.png">Angry</option>
+                        <option value="default.png">Default</option>
+                        <option value="naughty.png">Naughty</option>
+                        <option value="panda.png">Panda</option>
+                        <option value="smart.png">Smart</option>
+                        <option value="star.png">Star</option>
+                    </select>
+                </div>
+
+                <div class="style">
+                    <h3>Leg</h3>
+                    <select name="" id="leg-select">
+                        <option value="bubble-tea.png">Bubble Tea</option>
+                        <option value="cookie.png">Cookie</option>
+                        <option value="default.png">Default</option>
+                        <option value="game-console.png">Game Console</option>
+                        <option value="tilt-backward.png">Tilt Backward</option>
+                        <option value="tilt-forward.png">Tilt Forward</option>
+                    </select>
+                </div>
+
+                <div class="style">
+                    <h3>Mouth</h3>
+                    <select name="" id="mouth-select">
+                        <option value="astonished.png">Bubble Tea</option>
+                        <option value="cookie.png">Cookie</option>
+                        <option value="default.png">Default</option>
+                        <option value="game-console.png">Game Console</option>
+                        <option value="tilt-backward.png">Tilt Backward</option>
+                        <option value="tilt-forward.png">Tilt Forward</option>
+                    </select>
+                </div>
+
+                <div class="style">
+                    <h3>Background</h3>
+                    <select name="" id="background-select">
+                        <option value="blue50.png">Blue50</option>
+                        <option value="blue60.png">Blue60</option>
+                        <option value="blue70.png">Blue70</option>
+                        <option value="darkblue30.png">Darkblue30</option>
+                        <option value="darkblue50.png">Darkblue50</option>
+                        <option value="darkblue70.png">Darkblue70</option>
+                        <option value="green50.png">Green50</option>
+                        <option value="green60.png">Green60</option>
+                        <option value="green70.png">Green70</option>
+                        <option value="grey40.png">Grey40</option>
+                        <option value="grey70.png">Grey70</option>
+                        <option value="grey80.png">Grey80</option>
+                        <option value="red50.png">Red50</option>
+                        <option value="red60.png">Red60</option>
+                        <option value="red70.png">Red70</option>
+                        <option value="yellow50.png">Yellow50</option>
+                        <option value="yellow60.png">Yellow60</option>
+                        <option value="yellow70.png">Yellow70</option>
+                    </select>
+                </div>
+
+            </div>
         </div>
-        <script src="script.js"></script>
-    </body>
-    </html>
+    </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -7,7 +7,6 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    align-items: center;
     background-color: rgb(245, 245, 245);
 }
 
@@ -18,32 +17,31 @@ h1 {
 }
 
 .main {
-    justify-content: space-between;
     display: flex;
-    margin: auto;
-    width: 80%;
+    justify-content: space-between;
+}
+
+.image {
+    margin-left: 6rem;
+    margin-top: 1rem;
+}
+
+.alpacaImage {
+    height: 400px;
+    width: 400px;
+}
+
+.accessories {
+    margin-right: 14rem;
 }
 
 img {
-    
-    border-radius: 15px;
     height: 400px;
     width: 400px;
 }
 
 .alpaca-img {
     position: absolute;
-}
-
-.choise {
-    margin: 0.5rem;
-}
-
-.allbtn {
-    padding-left: 1rem;
-    position: relative;
-    flex-wrap: wrap;
-    max-width: 40%;
 }
 
 button {
@@ -63,11 +61,23 @@ button:focus {
     color: #fff;
 }
 
-.style {
-    padding-top: 2rem;
-}
-
 .random {
     position: relative;
-    margin-top: 410px;    
+    margin-top: 20px;    
+}
+
+.style {
+    margin-bottom: 1rem;
+    font-size: 0.7rem;
+    display: inline;
+}
+
+select {
+    border:2px solid rgb(42, 134, 255);
+    padding: 10px;
+    font-family: inherit;
+    border-radius: 30px;
+    color: black;
+    background-color: rgb(245, 245, 245);
+    margin: 0.4rem;
 }

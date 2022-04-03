@@ -1,3 +1,5 @@
+
+
 const backgroung_array = [
     'blue50.png',
     'blue60.png',
@@ -76,13 +78,18 @@ const accessories_array = [
 ]
 
 const randomBtn = document.getElementById('random')
-const backgroundBtn = document.getElementById('background-btn')
-const hairBtn = document.getElementById('hair-btn')
+const downloadBtn = document.getElementById('download')
+
+const backgroundSelect = document.getElementById('background-select')
+const hairSelect = document.getElementById('hair-select')
 const earsSelect = document.getElementById('ears-select')
 const neckSelect = document.getElementById('neck-select')
 const eyesSelect = document.getElementById('eyes-select')
 const legSelect = document.getElementById('leg-select')
 
+hairSelect.addEventListener('change', (event) => {
+    document.getElementById('hair').src = `img/alpaca 2/hair/${event.target.value}`
+})
 
 earsSelect.addEventListener('change', (event) => {
     document.getElementById('ears').src = `img/alpaca 2/ears/${event.target.value}`
@@ -100,39 +107,9 @@ legSelect.addEventListener('change', (event) => {
     document.getElementById('leg').src = `img/alpaca 2/leg/${event.target.value}`
 })
 
-backgroundBtn.addEventListener('click', () => {
-    
-    for (index = 0; index <  backgroung_array.length; ++index){
-        
-        const array = backgroung_array[index]
-        
-        let styleBtn = document.createElement('button')
-        styleBtn.innerText = array
-        styleBackgroundBtn = document.body.appendChild(styleBtn)
-
-        styleBackgroundBtn.addEventListener('click', () => {
-            document.getElementById('background').src = `img/alpaca 2/backgrounds/${array}`
-        })
-    }
+backgroundSelect.addEventListener('change', (event) => {
+    document.getElementById('background').src = `img/alpaca 2/backgrounds/${event.target.value}`
 })
-
-hairBtn.addEventListener('click', () => {
-    
-    for (index = 0; index <  hair_array.length; ++index){
-        
-        const array = hair_array[index]
-        
-        let styleBtn = document.createElement('button')
-        styleBtn.innerText = array
-        styleHairBtn = document.body.appendChild(styleBtn)
-
-        styleHairBtn.addEventListener('click', () => {
-            document.getElementById('hair').src = `img/alpaca 2/hair/${array}`
-        })   
-    }
-})
-
-
 
 
 function getRandom() {
@@ -166,8 +143,15 @@ function getRandom() {
 
 randomBtn.addEventListener('click', getRandom())
 
-backgroundBtn.addEventListener('click', createBtn)
-
-function createBtn() {
-
-}
+downloadBtn.addEventListener("click", function () {
+    html2canvas(document.querySelector(".alpacaImage")).then((canvas) => {
+      let a = document.createElement("a");
+      a.href = canvas
+        .toDataURL("image/jpeg")
+        .replace("image/jpeg", "image/octet-stream");
+  
+      a.download = "Alpaca.jpg";
+      a.click();
+    });
+  });
+  
