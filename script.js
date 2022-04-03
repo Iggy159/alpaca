@@ -77,19 +77,63 @@ const accessories_array = [
 
 const randomBtn = document.getElementById('random')
 const backgroundBtn = document.getElementById('background-btn')
+const hairBtn = document.getElementById('hair-btn')
+const earsSelect = document.getElementById('ears-select')
+const neckSelect = document.getElementById('neck-select')
+const eyesSelect = document.getElementById('eyes-select')
+const legSelect = document.getElementById('leg-select')
 
-backgroundBtn.addEventListener('click', (e) => {
-    let index
-    for (index = 0; index <  backgroung_array.length; ++index){
-        const array = backgroung_array[index]
-        console.log(array)
-        let btn = document.createElement('button')
-        btn.innerText = array
-        document.body.appendChild(btn)
-        document.getElementById('background').src = `img/alpaca 2/backgrounds/${backgroung_array[?]}`
+
+earsSelect.addEventListener('change', (event) => {
+    document.getElementById('ears').src = `img/alpaca 2/ears/${event.target.value}`
+})
+
+neckSelect.addEventListener('change', (event) => {
+    document.getElementById('neck').src = `img/alpaca 2/neck/${event.target.value}`
+})
+
+eyesSelect.addEventListener('change', (event) => {
+    document.getElementById('eyes').src = `img/alpaca 2/eyes/${event.target.value}`
+})
+
+legSelect.addEventListener('change', (event) => {
+    document.getElementById('leg').src = `img/alpaca 2/leg/${event.target.value}`
+})
+
+backgroundBtn.addEventListener('click', () => {
     
+    for (index = 0; index <  backgroung_array.length; ++index){
+        
+        const array = backgroung_array[index]
+        
+        let styleBtn = document.createElement('button')
+        styleBtn.innerText = array
+        styleBackgroundBtn = document.body.appendChild(styleBtn)
+
+        styleBackgroundBtn.addEventListener('click', () => {
+            document.getElementById('background').src = `img/alpaca 2/backgrounds/${array}`
+        })
     }
 })
+
+hairBtn.addEventListener('click', () => {
+    
+    for (index = 0; index <  hair_array.length; ++index){
+        
+        const array = hair_array[index]
+        
+        let styleBtn = document.createElement('button')
+        styleBtn.innerText = array
+        styleHairBtn = document.body.appendChild(styleBtn)
+
+        styleHairBtn.addEventListener('click', () => {
+            document.getElementById('hair').src = `img/alpaca 2/hair/${array}`
+        })   
+    }
+})
+
+
+
 
 function getRandom() {
     randomIndexBackground = Math.floor(Math.random() * backgroung_array.length)
