@@ -16,9 +16,9 @@ h1 {
     margin: 1rem 0;
 }
 
-.main {
+.container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .image {
@@ -31,8 +31,22 @@ h1 {
     width: 400px;
 }
 
-.accessories {
+h2 {
+    margin-left: 5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.styles {
     margin-right: 14rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+}
+
+.style {
+    margin-bottom: 1.5rem;
 }
 
 img {
@@ -66,18 +80,17 @@ button:focus {
     margin-top: 20px;    
 }
 
-.style {
-    margin-bottom: 1rem;
-    font-size: 0.7rem;
-    display: inline;
-}
-
 select {
     border:2px solid rgb(42, 134, 255);
     padding: 10px;
     font-family: inherit;
+    font-size: 15px;
     border-radius: 30px;
     color: black;
     background-color: rgb(245, 245, 245);
-    margin: 0.4rem;
+    margin: 0; 
+}
+
+option {
+    border: none;
 }

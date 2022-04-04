@@ -11,14 +11,11 @@
 </head>
 
 <body>
+    <h1>Alpaca Generator</h1>
     <div class="container">
 
-        <h1>Alpaca Generator</h1>
-
-        <div class="main">
-
-            <div class="image" id="">
-                <div class="alpacaImage">
+        <div class="image" id="">
+            <div class="alpacaImage">
                 <img class='alpaca-img' id="background" style="z-index: 0;" src="img/alpaca 2/backgrounds/" alt="">
                 <img class="alpaca-img" id="ears" style="z-index: 5;" src="img/alpaca 2/ears/" alt="">
                 <img class="alpaca-img" id="eyes" style="z-index: 7;" src="img/alpaca 2/eyes/" alt="">
@@ -27,18 +24,19 @@
                 <img class="alpaca-img" id="neck" style="z-index: 1;" src="img/alpaca 2/neck/" alt="">
                 <img class="alpaca-img" id="mouth" style="z-index: 3;" src="img/alpaca 2/mouth/" alt="">
                 <img class="alpaca-img" id="nose" style="z-index: 2;" src="img/alpaca 2/nose.png" alt="">
-                <img class="alpaca-img" id="accessories" style="z-index: 8;" src="img/alpaca 2/accessories/earings.png" alt="">
+                <img class="alpaca-img" id="accessories" style="z-index: 8;" src="img/alpaca 2/accessories/earings.png"
+                    alt="">
             </div>
-                <div class="random">
-                    <button onclick="getRandom()" id="random">Random</button>
-                    <button id="download">Download</button>
-                </div>
-
+            <div class="random">
+                <button onclick="getRandom()" id="random">Random</button>
+                <button id="download">Download</button>
             </div>
+        </div>
 
-            <div class="accessories">
-                <h2 class="choise">Accessorize the aplaca's</h2>
+        <div class="accessories">
+            <h2 class="choise">Accessorize the aplaca's</h2>
 
+            <div class="styles">
                 <div class="style">
                     <h3>Hair</h3>
                     <select name="" id="hair-select">
@@ -98,12 +96,21 @@
                 <div class="style">
                     <h3>Mouth</h3>
                     <select name="" id="mouth-select">
-                        <option value="astonished.png">Bubble Tea</option>
-                        <option value="cookie.png">Cookie</option>
+                        <option value="astonished.png">Astonished</option>
                         <option value="default.png">Default</option>
-                        <option value="game-console.png">Game Console</option>
-                        <option value="tilt-backward.png">Tilt Backward</option>
-                        <option value="tilt-forward.png">Tilt Forward</option>
+                        <option value="eating.png">Eating</option>
+                        <option value="laugh.png">Laugh</option>
+                        <option value="tongue.png">Tongue</option>
+                    </select>
+                </div>
+
+                <div class="style">
+                    <h3>Accessorize</h3>
+                    <select name="" id="accessories-select">
+                        <option value="earings.png">Earings</option>
+                        <option value="flower.png">Flower</option>
+                        <option value="glasses.png">Glasses</option>
+                        <option value="headphone.png">Headphone</option>
                     </select>
                 </div>
 
@@ -130,11 +137,8 @@
                         <option value="yellow70.png">Yellow70</option>
                     </select>
                 </div>
-
             </div>
         </div>
-    </div>
-
     </div>
     <script src="script.js"></script>
 </body>

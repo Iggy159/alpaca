@@ -1,5 +1,3 @@
-
-
 const backgroung_array = [
     'blue50.png',
     'blue60.png',
@@ -86,6 +84,8 @@ const earsSelect = document.getElementById('ears-select')
 const neckSelect = document.getElementById('neck-select')
 const eyesSelect = document.getElementById('eyes-select')
 const legSelect = document.getElementById('leg-select')
+const mouthSelect = document.getElementById('mouth-select')
+const accessoriesSelect = document.getElementById('accessories-select')
 
 hairSelect.addEventListener('change', (event) => {
     document.getElementById('hair').src = `img/alpaca 2/hair/${event.target.value}`
@@ -111,6 +111,13 @@ backgroundSelect.addEventListener('change', (event) => {
     document.getElementById('background').src = `img/alpaca 2/backgrounds/${event.target.value}`
 })
 
+mouthSelect.addEventListener('change', (event) => {
+    document.getElementById('mouth').src = `img/alpaca 2/mouth/${event.target.value}`
+})
+
+accessoriesSelect.addEventListener('change', (event) => {
+    document.getElementById('accessories').src = `img/alpaca 2/accessories/${event.target.value}`
+})
 
 function getRandom() {
     randomIndexBackground = Math.floor(Math.random() * backgroung_array.length)
